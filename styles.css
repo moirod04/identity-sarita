@@ -33,6 +33,30 @@ a { color: var(--purple); }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
+/* ===================== Franja institucional ===================== */
+.inst {
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  flex-wrap: wrap; text-align: center;
+  padding: 14px 24px; background: var(--white);
+  border-bottom: 1px solid var(--lav-light);
+}
+.inst__logo { height: 66px; width: auto; object-fit: contain; flex-shrink: 0; }
+.inst__logo.is-placeholder {
+  height: 66px; width: 120px; display: grid; place-items: center;
+  background: var(--lav-light); color: var(--purple); border-radius: 8px;
+  font-size: .7rem; padding: 6px; line-height: 1.2;
+}
+.inst__text { display: flex; flex-direction: column; line-height: 1.25; }
+.inst__text strong { font-family: 'Fraunces', serif; color: var(--plum); font-size: 1.02rem; }
+.inst__text span { color: var(--ink-soft); font-size: .82rem; }
+
+@media (max-width: 520px) {
+  .inst { gap: 14px; }
+  .inst__logo, .inst__logo.is-placeholder { height: 50px; }
+  .inst__text strong { font-size: .92rem; }
+  .inst__text span { font-size: .74rem; }
+}
+
 /* ===================== Nav ===================== */
 .nav {
   position: sticky; top: 0; z-index: 50;
