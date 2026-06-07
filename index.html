@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- REEMPLAZAR: poné tu nombre en el título de la pestaña -->
+  <title>Portafolio de Identidad Digital | [Tu nombre]</title>
+  <meta name="description" content="Portafolio de Identidad Digital Estratégica — marca personal como futuro/a educador/a." />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV FIJA ===================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <!-- REEMPLAZAR: iniciales o nombre corto para el logo -->
+      <a href="#inicio" class="nav__brand">[TN] · Identidad Digital</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#reflexion">Reflexión</a>
+        <a href="#perfiles">Perfiles</a>
+        <a href="#video-cv">Video y CV</a>
+        <a href="#estrategia">Estrategia</a>
+        <a href="#conclusiones">Conclusiones</a>
+        <a href="#contacto" class="nav__cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__inner">
+      <div class="hero__photo">
+        <!-- REEMPLAZAR: subí tu foto a assets/foto-perfil.jpg -->
+        <img src="assets/foto-perfil.jpg" alt="Foto de perfil de [Tu nombre]"
+             onerror="this.classList.add('is-placeholder');this.alt='Agregá tu foto en assets/foto-perfil.jpg'" />
+      </div>
+      <div class="hero__text">
+        <p class="hero__eyebrow">Portafolio de Identidad Digital Estratégica</p>
+        <!-- REEMPLAZAR: tu nombre completo -->
+        <h1 class="hero__title">Hola, soy <span>[Tu nombre]</span></h1>
+        <!-- REEMPLAZAR: tu rol / mención (AB02 Desarrollo de RR.HH. o AC02 Diseño y Gestión de Proyectos Educativos) -->
+        <p class="hero__role">Futuro/a Educador/a · Licenciatura en Educación — Mención [AB02 / AC02]</p>
+        <!-- REEMPLAZAR: tu frase o misión personal -->
+        <blockquote class="hero__quote">“[Tu frase o misión personal: qué te mueve como educador/a.]”</blockquote>
+
+        <div class="hero__links">
+          <!-- REEMPLAZAR los href="#" con los enlaces reales de tus perfiles -->
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">ResearchGate</a>
+          <a href="#" target="_blank" rel="noopener">Academia.edu</a>
+          <a href="#" target="_blank" rel="noopener">ORCID</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <!-- REEMPLAZAR: tu correo -->
+          <a href="mailto:tucorreo@ejemplo.com">Correo</a>
+        </div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#reflexion" aria-label="Bajar">↓</a>
+  </section>
+
+  <main>
+
+    <!-- ============ 1. INTRODUCCIÓN Y REFLEXIÓN ============ -->
+    <section class="section section--alt reveal" id="reflexion">
+      <div class="wrap">
+        <p class="section__kicker">Componente 1</p>
+        <h2 class="section__title">Introducción y Reflexión Personal</h2>
+
+        <h3>Propósito del portafolio</h3>
+        <!-- REEMPLAZAR -->
+        <p>[Breve introducción: explicá el propósito de este portafolio y por qué la identidad
+          digital es importante para vos como futuro/a educador/a. 1 a 2 párrafos.]</p>
+
+        <h3>Lo que aprendí al construir cada elemento</h3>
+        <!-- REEMPLAZAR -->
+        <p>[Reflexión personal sobre lo que aprendiste al crear el video, el currículum y los
+          perfiles. ¿Qué descubriste sobre vos mismo/a? ¿Cómo contribuye cada elemento a tu
+          imagen profesional?]</p>
+
+        <h3>Huella e identidad digital</h3>
+        <!-- REEMPLAZAR -->
+        <p>[¿Qué aprendiste sobre la huella e identidad digital? ¿Cómo te ves representado/a en
+          línea hoy?]</p>
+
+        <h3>Análisis de coherencia</h3>
+        <!-- REEMPLAZAR -->
+        <p>[¿El video, el currículum y los perfiles proyectan una imagen consistente?
+          ¿Hay áreas de mejora? Identificá la coherencia entre los distintos elementos.]</p>
+
+        <p class="apa-note">Nota: este portafolio sigue las Normas APA 7.ª edición.</p>
+      </div>
+    </section>
+
+    <!-- ============ 2. ANÁLISIS DE PERFILES ============ -->
+    <section class="section reveal" id="perfiles">
+      <div class="wrap">
+        <p class="section__kicker">Componente 2</p>
+        <h2 class="section__title">Análisis de Perfiles Académicos, Profesionales y Sociales</h2>
+        <p class="section__lead">Capturas y análisis de cada perfil en relación con mi objetivo
+          profesional como educador/a. Seleccioná los relevantes para tu área y duplicá o eliminá
+          tarjetas según necesites.</p>
+
+        <div class="cards">
+
+          <!-- ===== TARJETA DE PERFIL (duplicá este bloque por cada red) ===== -->
+          <article class="card">
+            <div class="card__shot">
+              <!-- REEMPLAZAR: captura en assets/perfil-linkedin.png -->
+              <img src="assets/perfil-linkedin.png" alt="Captura de LinkedIn"
+                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-linkedin.png'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">LinkedIn</h3>
+              <ul class="card__axes">
+                <li><strong>Audiencia:</strong> <span>[¿A quién está dirigido?]</span></li>
+                <li><strong>Contenido:</strong> <span>[¿Qué compartís? ¿Es relevante?]</span></li>
+                <li><strong>Tono y lenguaje:</strong> <span>[¿Apropiado para un/a educador/a?]</span></li>
+                <li><strong>Imagen:</strong> <span>[¿Foto e info visual profesionales?]</span></li>
+                <li><strong>Privacidad:</strong> <span>[¿Configuración consciente?]</span></li>
+              </ul>
+              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
+              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__shot">
+              <img src="assets/perfil-researchgate.png" alt="Captura de ResearchGate"
+                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-researchgate.png'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">ResearchGate</h3>
+              <ul class="card__axes">
+                <li><strong>Audiencia:</strong> <span>[…]</span></li>
+                <li><strong>Contenido:</strong> <span>[…]</span></li>
+                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
+                <li><strong>Imagen:</strong> <span>[…]</span></li>
+                <li><strong>Privacidad:</strong> <span>[…]</span></li>
+              </ul>
+              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
+              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__shot">
+              <img src="assets/perfil-academia.png" alt="Captura de Academia.edu"
+                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-academia.png'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Academia.edu</h3>
+              <ul class="card__axes">
+                <li><strong>Audiencia:</strong> <span>[…]</span></li>
+                <li><strong>Contenido:</strong> <span>[…]</span></li>
+                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
+                <li><strong>Imagen:</strong> <span>[…]</span></li>
+                <li><strong>Privacidad:</strong> <span>[…]</span></li>
+              </ul>
+              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
+              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__shot">
+              <img src="assets/perfil-instagram.png" alt="Captura de Instagram"
+                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-instagram.png'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Instagram / X</h3>
+              <ul class="card__axes">
+                <li><strong>Audiencia:</strong> <span>[…]</span></li>
+                <li><strong>Contenido:</strong> <span>[…]</span></li>
+                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
+                <li><strong>Imagen:</strong> <span>[…]</span></li>
+                <li><strong>Privacidad:</strong> <span>[…]</span></li>
+              </ul>
+              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
+              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. VIDEO + CV ============ -->
+    <section class="section section--alt reveal" id="video-cv">
+      <div class="wrap">
+        <p class="section__kicker">Componente 3</p>
+        <h2 class="section__title">Video de Presentación y Currículum Vitae</h2>
+
+        <div class="videocv">
+          <div class="videocv__video">
+            <h3>Video de presentación profesional</h3>
+            <div class="video-frame">
+              <!-- REEMPLAZAR el src por tu video real:
+                   YouTube → https://www.youtube.com/embed/ID_DEL_VIDEO
+                   Drive   → https://drive.google.com/file/d/ID/preview -->
+              <iframe
+                src="about:blank"
+                title="Video de presentación profesional"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-hint">⚠️ Reemplazá el <code>src</code> del iframe en
+              <code>index.html</code> con el enlace de tu video (YouTube o Google Drive) para que
+              el jurado pueda reproducirlo.</p>
+          </div>
+
+          <aside class="videocv__side">
+            <div class="qr">
+              <!-- REEMPLAZAR: subí tu QR a assets/qr-video.png -->
+              <img src="assets/qr-video.png" alt="Código QR del video"
+                   onerror="this.classList.add('is-placeholder');this.alt='QR: assets/qr-video.png'" />
+              <p>Escaneá para ver el video</p>
+            </div>
+            <!-- REEMPLAZAR: subí tu CV a assets/cv.pdf -->
+            <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">Descargar mi CV (PDF)</a>
+          </aside>
+        </div>
+
+        <h3>Cómo se complementan</h3>
+        <!-- REEMPLAZAR -->
+        <p>[Explicá cómo el video y el currículum se usan estratégicamente para distintos
+          propósitos: por ejemplo, el video para una primera impresión en una feria virtual y el
+          currículum para una solicitud formal.]</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. ESTRATEGIA DE MARCA ============ -->
+    <section class="section reveal" id="estrategia">
+      <div class="wrap">
+        <p class="section__kicker">Componente 4</p>
+        <h2 class="section__title">Estrategia de Marca Personal Digital</h2>
+
+        <h3>Mi marca personal como educador/a</h3>
+        <!-- REEMPLAZAR -->
+        <p>[¿Qué te diferencia? ¿Cuáles son tus valores y fortalezas clave?]</p>
+
+        <h3>Objetivos profesionales</h3>
+        <div class="goals">
+          <div class="goal">
+            <h4>Corto plazo</h4>
+            <!-- REEMPLAZAR -->
+            <p>[Tus objetivos a corto plazo.]</p>
+          </div>
+          <div class="goal">
+            <h4>Largo plazo</h4>
+            <!-- REEMPLAZAR -->
+            <p>[Tus objetivos a largo plazo.]</p>
+          </div>
+        </div>
+
+        <h3>Plan de acción</h3>
+        <div class="plan">
+          <div class="plan__item"><h4>Plataformas a priorizar</h4><p>[Canales más efectivos para conectar con tu público objetivo.]</p></div>
+          <div class="plan__item"><h4>Tipos de contenido</h4><p>[Recursos, reflexiones pedagógicas, debates… qué valor aportás.]</p></div>
+          <div class="plan__item"><h4>Frecuencia y consistencia</h4><p>[Con qué regularidad publicás y actualizás.]</p></div>
+          <div class="plan__item"><h4>Interacción y networking</h4><p>[Cómo interactuás con otros profesionales.]</p></div>
+          <div class="plan__item"><h4>Monitoreo y adaptación</h4><p>[Cómo medís la efectividad y ajustás.]</p></div>
+          <div class="plan__item"><h4>Ética y seguridad</h4><p>[Consideraciones éticas y de seguridad en la gestión de tu identidad digital.]</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. CONCLUSIONES ============ -->
+    <section class="section section--alt reveal" id="conclusiones">
+      <div class="wrap">
+        <p class="section__kicker">Componente 5</p>
+        <h2 class="section__title">Conclusiones y Próximos Pasos</h2>
+
+        <h3>Principales conclusiones</h3>
+        <!-- REEMPLAZAR -->
+        <p>[Resumen de las principales conclusiones de la actividad.]</p>
+
+        <h3>Plan de acción personal continuo</h3>
+        <!-- REEMPLAZAR -->
+        <p>[Cómo vas a seguir desarrollando y gestionando tu identidad digital en el futuro.]</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section reveal" id="contacto">
+      <div class="wrap contacto">
+        <p class="section__kicker">Contacto</p>
+        <h2 class="section__title">Conectemos</h2>
+        <!-- REEMPLAZAR los enlaces -->
+        <div class="hero__links hero__links--center">
+          <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">ResearchGate</a>
+          <a href="#" target="_blank" rel="noopener">Academia.edu</a>
+          <a href="#" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>Portafolio de Identidad Digital Estratégica</strong> — [Tu nombre]</p>
+      <p class="footer__small">Elaborado siguiendo las Normas APA 7.ª edición. Actividad diseñada
+        para las asignaturas Teoría de las Organizaciones, Comunicación Organizacional, Prácticas
+        Profesionales II y Seminario de Tesis, por la profesora Clorinda Maiuri. Período 2025-2026.</p>
+      <a href="#top" class="footer__top">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
