@@ -61,6 +61,7 @@ a { color: var(--purple); }
 .nav__links a {
   text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: 0.92rem;
   padding: 8px 12px; border-radius: 999px; transition: color .2s, background .2s;
+  white-space: nowrap;
 }
 .nav__links a:hover { color: var(--plum); background: var(--lav-light); }
 .nav__links a.is-active { color: var(--plum); background: var(--lav-light); }
