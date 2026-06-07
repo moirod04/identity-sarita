@@ -16,23 +16,14 @@
 </head>
 <body>
 
-  <!-- ===================== FRANJA INSTITUCIONAL ===================== -->
-  <div class="inst">
-    <img class="inst__logo" src="assets/ucv.png" alt="Universidad Central de Venezuela" />
-    <div class="inst__text">
-      <strong>Universidad Central de Venezuela</strong>
-      <span>Facultad de Humanidades y Educación · Licenciatura en Educación</span>
-    </div>
-    <!-- REEMPLAZAR: guardá el logo de la Facultad en assets/fhe.png -->
-    <img class="inst__logo" src="assets/fhe.png" alt="Facultad de Humanidades y Educación"
-         onerror="this.classList.add('is-placeholder');this.alt='Logo Facultad: assets/fhe.png'" />
-  </div>
-
   <!-- ===================== NAV FIJA ===================== -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <!-- REEMPLAZAR: iniciales o nombre corto para el logo -->
-      <a href="#inicio" class="nav__brand">[TN] · Identidad Digital</a>
+      <!-- REEMPLAZAR: iniciales o nombre corto en el <span> -->
+      <a href="#inicio" class="nav__brand">
+        <img class="nav__logo" src="assets/ucv.png" alt="Universidad Central de Venezuela" />
+        <span>[TN] · Identidad Digital</span>
+      </a>
 
       <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -47,6 +38,10 @@
         <a href="#conclusiones">Conclusiones</a>
         <a href="#contacto" class="nav__cta">Contacto</a>
       </nav>
+
+      <!-- REEMPLAZAR: guardá el logo de la Facultad en assets/fhe.png -->
+      <img class="nav__logo nav__logo--right" src="assets/fhe.png" alt="Facultad de Humanidades y Educación"
+           onerror="this.classList.add('is-placeholder');this.alt='assets/fhe.png'" />
     </div>
   </header>
 
