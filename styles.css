@@ -51,7 +51,7 @@ a { color: var(--purple); }
   text-decoration: none; font-size: 1.05rem;
 }
 .nav__logo { height: 40px; width: auto; object-fit: contain; flex-shrink: 0; }
-.nav__logo--right { height: 44px; margin-left: 4px; }
+.nav__logo--right { height: 46px; margin-left: 4px; border-radius: 6px; }
 .nav__logo.is-placeholder {
   height: 40px; width: 64px; display: grid; place-items: center;
   background: var(--lav-light); color: var(--purple); border-radius: 8px;
