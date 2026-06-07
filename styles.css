@@ -48,7 +48,7 @@ a { color: var(--purple); }
 .nav__brand {
   display: flex; align-items: center; gap: 10px;
   font-family: 'Fraunces', serif; font-weight: 600; color: var(--plum);
-  text-decoration: none; font-size: 1.05rem;
+  text-decoration: none; font-size: 1.05rem; white-space: nowrap;
 }
 .nav__logo { height: 40px; width: auto; object-fit: contain; flex-shrink: 0; }
 .nav__logo--right { height: 46px; margin-left: 4px; border-radius: 6px; }
