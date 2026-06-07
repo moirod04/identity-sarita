@@ -37,12 +37,31 @@ const spy = new IntersectionObserver(
 );
 sections.forEach((s) => spy.observe(s));
 
-// Reveal on scroll
+// Reveal on scroll — efecto cascada (los elementos caen escalonados)
 const reveals = document.querySelectorAll('.reveal');
+const CASCADE_STEP = 90; // ms entre cada elemento
+
+function cascade(section) {
+  const wrap = section.querySelector('.wrap') || section;
+  const items = [];
+  wrap.querySelectorAll(':scope > *').forEach((child) => {
+    // En las grillas, escalonamos cada tarjeta/ítem por separado
+    if (child.matches('.cards, .plan, .goals')) {
+      child.querySelectorAll(':scope > *').forEach((g) => items.push(g));
+    } else {
+      items.push(child);
+    }
+  });
+  items.forEach((el, i) => {
+    el.style.transitionDelay = i * CASCADE_STEP + 'ms';
+  });
+}
+
 const revealObserver = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        cascade(entry.target);
         entry.target.classList.add('is-visible');
         obs.unobserve(entry.target);
       }
