@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- REEMPLAZAR: poné tu nombre en el título de la pestaña -->
-  <title>Portafolio de Identidad Digital | Sara Nova</title>
-  <meta name="description" content="Portafolio de Identidad Digital Estratégica — marca personal como futuro/a educador/a." />
+  <title>Portafolio | Sara Nova</title>
+  <meta name="description" content="Portafolio personal de Sara Nova — estudiante de Educación (UCV), tutora integral bilingüe, marketing digital y organización de eventos." />
 
   <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,13 +15,15 @@
 </head>
 <body>
 
+  <!-- Barra de progreso de scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- ===================== NAV FIJA ===================== -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <!-- REEMPLAZAR: iniciales o nombre corto en el <span> -->
       <a href="#inicio" class="nav__brand">
         <img class="nav__logo" src="assets/ucv.png" alt="Universidad Central de Venezuela" />
-        <span>Sara Nova · Identidad Digital</span>
+        <span>Sara Nova</span>
       </a>
 
       <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -31,15 +32,14 @@
 
       <nav class="nav__links" id="menu">
         <a href="#inicio">Inicio</a>
-        <a href="#reflexion">Reflexión</a>
-        <a href="#perfiles">Perfiles</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tutorias">Tutorías</a>
+        <a href="#experiencia">Experiencia</a>
         <a href="#video-cv">Video y CV</a>
-        <a href="#estrategia">Estrategia</a>
-        <a href="#conclusiones">Conclusiones</a>
         <a href="#contacto" class="nav__cta">Contacto</a>
       </nav>
 
-      <!-- REEMPLAZAR: guardá el logo de la Facultad en assets/fhe.png -->
+      <!-- REEMPLAZAR: logo de la Facultad en assets/fhe.png -->
       <img class="nav__logo nav__logo--right" src="assets/fhe.png" alt="Facultad de Humanidades y Educación"
            onerror="this.classList.add('is-placeholder');this.alt='assets/fhe.png'" />
     </div>
@@ -47,6 +47,10 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="inicio">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+
     <div class="hero__inner">
       <div class="hero__photo">
         <!-- REEMPLAZAR: subí tu foto a assets/foto-perfil.jpg -->
@@ -54,15 +58,18 @@
              onerror="this.classList.add('is-placeholder');this.alt='Agregá tu foto en assets/foto-perfil.jpg'" />
       </div>
       <div class="hero__text">
-        <p class="hero__eyebrow">Portafolio de Identidad Digital Estratégica</p>
-        <!-- REEMPLAZAR: tu nombre completo -->
+        <p class="hero__eyebrow">Portafolio personal</p>
         <h1 class="hero__title">Hola, soy <span>Sara Nova</span></h1>
         <p class="hero__role">Futura Educadora · Licenciatura en Educación — Mención Recursos Humanos (AB02)</p>
         <!-- REEMPLAZAR: tu frase o misión personal -->
-        <blockquote class="hero__quote">“[Tu frase o misión personal: qué te mueve como educador/a.]”</blockquote>
+        <blockquote class="hero__quote">“[Tu frase o misión personal: qué te mueve como educadora.]”</blockquote>
+
+        <div class="hero__cta">
+          <a href="#tutorias" class="btn">Conocé mi trabajo</a>
+          <a href="#contacto" class="btn btn--ghost">Contacto</a>
+        </div>
 
         <div class="hero__links">
-          <!-- REEMPLAZAR los href="#" con los enlaces reales de tus perfiles -->
           <a href="https://www.linkedin.com/in/sara-nova-254061134/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://ucv.academia.edu/SaraNova" target="_blank" rel="noopener">Academia.edu</a>
           <a href="https://orcid.org/0009-0008-9838-6349" target="_blank" rel="noopener">ORCID</a>
@@ -71,157 +78,162 @@
         </div>
       </div>
     </div>
-    <a class="hero__scroll" href="#reflexion" aria-label="Bajar">↓</a>
+    <a class="hero__scroll" href="#sobre-mi" aria-label="Bajar">↓</a>
   </section>
 
   <main>
 
-    <!-- ============ 1. INTRODUCCIÓN Y REFLEXIÓN ============ -->
-    <section class="section section--alt reveal" id="reflexion">
-      <div class="wrap">
-        <p class="section__kicker">Componente 1</p>
-        <h2 class="section__title">Introducción y Reflexión Personal</h2>
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section section--alt reveal" id="sobre-mi">
+      <div class="wrap sobre">
+        <div class="sobre__text">
+          <p class="section__kicker">Sobre mí</p>
+          <h2 class="section__title">Estudiante de Educación con vocación</h2>
+          <!-- REEMPLAZAR -->
+          <p>[Contá quién sos como estudiante: en qué año de la carrera estás, qué te apasiona,
+            cómo te describirías. 1 párrafo.]</p>
+          <h3>¿Por qué elegí estudiar Educación?</h3>
+          <!-- REEMPLAZAR -->
+          <p>[Contá por qué decidiste estudiar Educación: qué te inspiró, qué experiencia te marcó,
+            qué querés lograr como educadora. 1 a 2 párrafos.]</p>
 
-        <h3>Propósito del portafolio</h3>
-        <!-- REEMPLAZAR -->
-        <p>[Breve introducción: explicá el propósito de este portafolio y por qué la identidad
-          digital es importante para vos como futuro/a educador/a. 1 a 2 párrafos.]</p>
-
-        <h3>Lo que aprendí al construir cada elemento</h3>
-        <!-- REEMPLAZAR -->
-        <p>[Reflexión personal sobre lo que aprendiste al crear el video, el currículum y los
-          perfiles. ¿Qué descubriste sobre vos mismo/a? ¿Cómo contribuye cada elemento a tu
-          imagen profesional?]</p>
-
-        <h3>Huella e identidad digital</h3>
-        <!-- REEMPLAZAR -->
-        <p>[¿Qué aprendiste sobre la huella e identidad digital? ¿Cómo te ves representado/a en
-          línea hoy?]</p>
-
-        <h3>Análisis de coherencia</h3>
-        <!-- REEMPLAZAR -->
-        <p>[¿El video, el currículum y los perfiles proyectan una imagen consistente?
-          ¿Hay áreas de mejora? Identificá la coherencia entre los distintos elementos.]</p>
-
-        <p class="apa-note">Nota: este portafolio sigue las Normas APA 7.ª edición.</p>
-      </div>
-    </section>
-
-    <!-- ============ 2. ANÁLISIS DE PERFILES ============ -->
-    <section class="section reveal" id="perfiles">
-      <div class="wrap">
-        <p class="section__kicker">Componente 2</p>
-        <h2 class="section__title">Análisis de Perfiles Académicos, Profesionales y Sociales</h2>
-        <p class="section__lead">Capturas y análisis de cada perfil en relación con mi objetivo
-          profesional como educador/a. Seleccioná los relevantes para tu área y duplicá o eliminá
-          tarjetas según necesites.</p>
-
-        <div class="cards">
-
-          <!-- ===== TARJETA DE PERFIL (duplicá este bloque por cada red) ===== -->
-          <article class="card">
-            <div class="card__shot">
-              <!-- REEMPLAZAR: captura en assets/perfil-linkedin.png -->
-              <img src="assets/perfil-linkedin.png" alt="Captura de LinkedIn"
-                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-linkedin.png'" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">LinkedIn</h3>
-              <ul class="card__axes">
-                <li><strong>Audiencia:</strong> <span>[¿A quién está dirigido?]</span></li>
-                <li><strong>Contenido:</strong> <span>[¿Qué compartís? ¿Es relevante?]</span></li>
-                <li><strong>Tono y lenguaje:</strong> <span>[¿Apropiado para un/a educador/a?]</span></li>
-                <li><strong>Imagen:</strong> <span>[¿Foto e info visual profesionales?]</span></li>
-                <li><strong>Privacidad:</strong> <span>[¿Configuración consciente?]</span></li>
-              </ul>
-              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
-              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__shot">
-              <img src="assets/perfil-researchgate.png" alt="Captura de ResearchGate"
-                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-researchgate.png'" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">ResearchGate</h3>
-              <ul class="card__axes">
-                <li><strong>Audiencia:</strong> <span>[…]</span></li>
-                <li><strong>Contenido:</strong> <span>[…]</span></li>
-                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
-                <li><strong>Imagen:</strong> <span>[…]</span></li>
-                <li><strong>Privacidad:</strong> <span>[…]</span></li>
-              </ul>
-              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
-              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__shot">
-              <img src="assets/perfil-academia.png" alt="Captura de Academia.edu"
-                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-academia.png'" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Academia.edu</h3>
-              <ul class="card__axes">
-                <li><strong>Audiencia:</strong> <span>[…]</span></li>
-                <li><strong>Contenido:</strong> <span>[…]</span></li>
-                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
-                <li><strong>Imagen:</strong> <span>[…]</span></li>
-                <li><strong>Privacidad:</strong> <span>[…]</span></li>
-              </ul>
-              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
-              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__shot">
-              <img src="assets/perfil-instagram.png" alt="Captura de Instagram"
-                   onerror="this.classList.add('is-placeholder');this.alt='Captura: assets/perfil-instagram.png'" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Instagram / X</h3>
-              <ul class="card__axes">
-                <li><strong>Audiencia:</strong> <span>[…]</span></li>
-                <li><strong>Contenido:</strong> <span>[…]</span></li>
-                <li><strong>Tono y lenguaje:</strong> <span>[…]</span></li>
-                <li><strong>Imagen:</strong> <span>[…]</span></li>
-                <li><strong>Privacidad:</strong> <span>[…]</span></li>
-              </ul>
-              <p class="card__sw"><strong>Fortalezas / Debilidades:</strong> [Resumen.]</p>
-              <p class="card__sw"><strong>Propuestas de mejora:</strong> [Acciones concretas.]</p>
-            </div>
-          </article>
-
+          <div class="stats">
+            <!-- REEMPLAZAR los números (data-target) y etiquetas -->
+            <div class="stat"><span class="stat__num" data-target="3">0</span><span class="stat__label">Año de carrera</span></div>
+            <div class="stat"><span class="stat__num" data-target="2">0</span><span class="stat__label">Idiomas</span></div>
+            <div class="stat"><span class="stat__num" data-target="50" data-suffix="+">0</span><span class="stat__label">Alumnos acompañados</span></div>
+          </div>
+        </div>
+        <div class="sobre__photo">
+          <!-- REEMPLAZAR: assets/sobre-mi.jpg -->
+          <img src="assets/sobre-mi.jpg" alt="Sara Nova"
+               onerror="this.classList.add('is-placeholder');this.alt='assets/sobre-mi.jpg'" />
         </div>
       </div>
     </section>
 
-    <!-- ============ 3. VIDEO + CV ============ -->
-    <section class="section section--alt reveal" id="video-cv">
+    <!-- ============ TUTORÍA INTEGRAL BILINGÜE ============ -->
+    <section class="section reveal" id="tutorias">
       <div class="wrap">
-        <p class="section__kicker">Componente 3</p>
-        <h2 class="section__title">Video de Presentación y Currículum Vitae</h2>
+        <p class="section__kicker">Mi trabajo actual</p>
+        <h2 class="section__title">Tutoría Integral Bilingüe</h2>
+        <!-- REEMPLAZAR -->
+        <p class="section__lead">[Describí en qué consiste tu trabajo de tutoría integral bilingüe:
+          a quiénes acompañás, qué metodología usás, qué resultados lográs. 1 párrafo.]</p>
+
+        <h3>Galería</h3>
+        <div class="gallery">
+          <!-- REEMPLAZAR: subí tus fotos a assets/tutoria-1.jpg … (duplicá/quitá ítems según necesites) -->
+          <figure class="gallery__item">
+            <img src="assets/tutoria-1.jpg" alt="Tutoría — foto 1"
+                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-1.jpg'" />
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/tutoria-2.jpg" alt="Tutoría — foto 2"
+                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-2.jpg'" />
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/tutoria-3.jpg" alt="Tutoría — foto 3"
+                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-3.jpg'" />
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/tutoria-4.jpg" alt="Tutoría — foto 4"
+                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-4.jpg'" />
+          </figure>
+        </div>
+
+        <h3>Reseñas</h3>
+        <div class="slider" id="reviews">
+          <div class="slider__track">
+            <!-- REEMPLAZAR cada reseña con testimonios reales -->
+            <blockquote class="review">
+              <p class="review__text">“[Reseña de un alumno, familia o colega sobre tu trabajo de tutoría.]”</p>
+              <footer class="review__author">— [Nombre], [relación: alumno/a, representante…]</footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">“[Otra reseña destacando un logro concreto o tu forma de enseñar.]”</p>
+              <footer class="review__author">— [Nombre], [relación]</footer>
+            </blockquote>
+            <blockquote class="review">
+              <p class="review__text">“[Una tercera reseña, por ejemplo sobre el progreso en el idioma.]”</p>
+              <footer class="review__author">— [Nombre], [relación]</footer>
+            </blockquote>
+          </div>
+          <button class="slider__btn slider__btn--prev" aria-label="Reseña anterior">‹</button>
+          <button class="slider__btn slider__btn--next" aria-label="Reseña siguiente">›</button>
+          <div class="slider__dots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA ============ -->
+    <section class="section section--alt reveal" id="experiencia">
+      <div class="wrap">
+        <p class="section__kicker">Otras experiencias</p>
+        <h2 class="section__title">Marketing Digital y Organización de Eventos</h2>
+        <p class="section__lead">[Breve introducción a tu experiencia más allá de la educación.]</p>
+
+        <div class="exp">
+          <article class="exp__card">
+            <div class="exp__icon">📣</div>
+            <h3>Marketing Digital</h3>
+            <!-- REEMPLAZAR -->
+            <p>[Contá tu experiencia en marketing digital: qué hacías, en qué plataformas, qué
+              resultados o aprendizajes. Redes, contenido, campañas, etc.]</p>
+          </article>
+          <article class="exp__card">
+            <div class="exp__icon">🎉</div>
+            <h3>Organización de Eventos</h3>
+            <!-- REEMPLAZAR -->
+            <p>[Contá tu experiencia organizando eventos: qué tipo de eventos, tu rol,
+              la escala, qué lograste.]</p>
+          </article>
+        </div>
+
+        <!-- Cinta de skills (marquee) -->
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <!-- REEMPLAZAR: tus habilidades / palabras clave -->
+            <span>Community Management</span><span>•</span>
+            <span>Diseño de Contenido</span><span>•</span>
+            <span>Campañas en Redes</span><span>•</span>
+            <span>Logística de Eventos</span><span>•</span>
+            <span>Coordinación de Equipos</span><span>•</span>
+            <span>Comunicación</span><span>•</span>
+            <span>Bilingüe</span><span>•</span>
+            <span>Community Management</span><span>•</span>
+            <span>Diseño de Contenido</span><span>•</span>
+            <span>Campañas en Redes</span><span>•</span>
+            <span>Logística de Eventos</span><span>•</span>
+            <span>Coordinación de Equipos</span><span>•</span>
+            <span>Comunicación</span><span>•</span>
+            <span>Bilingüe</span><span>•</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO + CV ============ -->
+    <section class="section reveal" id="video-cv">
+      <div class="wrap">
+        <p class="section__kicker">Presentación</p>
+        <h2 class="section__title">Video de Presentación y Currículum</h2>
 
         <div class="videocv">
           <div class="videocv__video">
-            <h3>Video de presentación profesional</h3>
+            <h3>Video de presentación</h3>
             <div class="video-frame">
               <!-- REEMPLAZAR el src por tu video real:
                    YouTube → https://www.youtube.com/embed/ID_DEL_VIDEO
                    Drive   → https://drive.google.com/file/d/ID/preview -->
               <iframe
                 src="about:blank"
-                title="Video de presentación profesional"
+                title="Video de presentación de Sara Nova"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             </div>
             <p class="video-hint">⚠️ Reemplazá el <code>src</code> del iframe en
-              <code>index.html</code> con el enlace de tu video (YouTube o Google Drive) para que
-              el jurado pueda reproducirlo.</p>
+              <code>index.html</code> con el enlace de tu video (YouTube o Google Drive).</p>
           </div>
 
           <aside class="videocv__side">
@@ -235,76 +247,19 @@
             <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">Descargar mi CV (PDF)</a>
           </aside>
         </div>
-
-        <h3>Cómo se complementan</h3>
-        <!-- REEMPLAZAR -->
-        <p>[Explicá cómo el video y el currículum se usan estratégicamente para distintos
-          propósitos: por ejemplo, el video para una primera impresión en una feria virtual y el
-          currículum para una solicitud formal.]</p>
-      </div>
-    </section>
-
-    <!-- ============ 4. ESTRATEGIA DE MARCA ============ -->
-    <section class="section reveal" id="estrategia">
-      <div class="wrap">
-        <p class="section__kicker">Componente 4</p>
-        <h2 class="section__title">Estrategia de Marca Personal Digital</h2>
-
-        <h3>Mi marca personal como educador/a</h3>
-        <!-- REEMPLAZAR -->
-        <p>[¿Qué te diferencia? ¿Cuáles son tus valores y fortalezas clave?]</p>
-
-        <h3>Objetivos profesionales</h3>
-        <div class="goals">
-          <div class="goal">
-            <h4>Corto plazo</h4>
-            <!-- REEMPLAZAR -->
-            <p>[Tus objetivos a corto plazo.]</p>
-          </div>
-          <div class="goal">
-            <h4>Largo plazo</h4>
-            <!-- REEMPLAZAR -->
-            <p>[Tus objetivos a largo plazo.]</p>
-          </div>
-        </div>
-
-        <h3>Plan de acción</h3>
-        <div class="plan">
-          <div class="plan__item"><h4>Plataformas a priorizar</h4><p>[Canales más efectivos para conectar con tu público objetivo.]</p></div>
-          <div class="plan__item"><h4>Tipos de contenido</h4><p>[Recursos, reflexiones pedagógicas, debates… qué valor aportás.]</p></div>
-          <div class="plan__item"><h4>Frecuencia y consistencia</h4><p>[Con qué regularidad publicás y actualizás.]</p></div>
-          <div class="plan__item"><h4>Interacción y networking</h4><p>[Cómo interactuás con otros profesionales.]</p></div>
-          <div class="plan__item"><h4>Monitoreo y adaptación</h4><p>[Cómo medís la efectividad y ajustás.]</p></div>
-          <div class="plan__item"><h4>Ética y seguridad</h4><p>[Consideraciones éticas y de seguridad en la gestión de tu identidad digital.]</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 5. CONCLUSIONES ============ -->
-    <section class="section section--alt reveal" id="conclusiones">
-      <div class="wrap">
-        <p class="section__kicker">Componente 5</p>
-        <h2 class="section__title">Conclusiones y Próximos Pasos</h2>
-
-        <h3>Principales conclusiones</h3>
-        <!-- REEMPLAZAR -->
-        <p>[Resumen de las principales conclusiones de la actividad.]</p>
-
-        <h3>Plan de acción personal continuo</h3>
-        <!-- REEMPLAZAR -->
-        <p>[Cómo vas a seguir desarrollando y gestionando tu identidad digital en el futuro.]</p>
       </div>
     </section>
 
     <!-- ============ CONTACTO ============ -->
-    <section class="section reveal" id="contacto">
+    <section class="section section--alt reveal" id="contacto">
       <div class="wrap contacto">
         <p class="section__kicker">Contacto</p>
         <h2 class="section__title">Conectemos</h2>
-        <!-- REEMPLAZAR los enlaces -->
+        <p class="section__lead">¿Querés trabajar conmigo o saber más? Escribime.</p>
         <div class="hero__links hero__links--center">
           <a href="mailto:snova.aries@gmail.com">snova.aries@gmail.com</a>
           <a href="https://www.linkedin.com/in/sara-nova-254061134/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/saranovaa" target="_blank" rel="noopener">Instagram</a>
           <a href="https://ucv.academia.edu/SaraNova" target="_blank" rel="noopener">Academia.edu</a>
           <a href="https://orcid.org/0009-0008-9838-6349" target="_blank" rel="noopener">ORCID</a>
         </div>
@@ -316,13 +271,18 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="wrap">
-      <p><strong>Portafolio de Identidad Digital Estratégica</strong> — Sara Nova</p>
-      <p class="footer__small">Elaborado siguiendo las Normas APA 7.ª edición. Actividad diseñada
-        para las asignaturas Teoría de las Organizaciones, Comunicación Organizacional, Prácticas
-        Profesionales II y Seminario de Tesis, por la profesora Clorinda Maiuri. Período 2025-2026.</p>
+      <p><strong>Sara Nova</strong> — Portafolio personal</p>
+      <p class="footer__small">Universidad Central de Venezuela · Facultad de Humanidades y Educación ·
+        Licenciatura en Educación, Mención Recursos Humanos. Período 2025-2026.</p>
       <a href="#top" class="footer__top">↑ Volver arriba</a>
     </div>
   </footer>
+
+  <!-- Lightbox para la galería -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Cerrar">×</button>
+    <img class="lightbox__img" src="" alt="" />
+  </div>
 
   <script src="script.js"></script>
 </body>
