@@ -122,24 +122,39 @@
           a quiénes acompañás, qué metodología usás, qué resultados lográs. 1 párrafo.]</p>
 
         <h3>Galería</h3>
-        <div class="gallery">
-          <!-- REEMPLAZAR: subí tus fotos a assets/tutoria-1.jpg … (duplicá/quitá ítems según necesites) -->
-          <figure class="gallery__item">
-            <img src="assets/tutoria-1.jpg" alt="Tutoría — foto 1"
-                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-1.jpg'" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="assets/tutoria-2.jpg" alt="Tutoría — foto 2"
-                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-2.jpg'" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="assets/tutoria-3.jpg" alt="Tutoría — foto 3"
-                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-3.jpg'" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="assets/tutoria-4.jpg" alt="Tutoría — foto 4"
-                 onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-4.jpg'" />
-          </figure>
+        <!-- Carrusel de fotos (arrastrá, usá las flechas o dejá que avance solo) -->
+        <div class="carousel">
+          <div class="carousel__track" id="galeriaTrack">
+            <!-- REEMPLAZAR: subí tus fotos a assets/tutoria-1.jpg … y editá las descripciones.
+                 Duplicá o quitá <figure class="photo"> según cuántas fotos tengas. -->
+            <figure class="photo">
+              <img src="assets/tutoria-1.jpg" alt="Tutoría — foto 1"
+                   onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-1.jpg'" />
+              <figcaption class="photo__cap">[Descripción de la foto 1]</figcaption>
+            </figure>
+            <figure class="photo">
+              <img src="assets/tutoria-2.jpg" alt="Tutoría — foto 2"
+                   onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-2.jpg'" />
+              <figcaption class="photo__cap">[Descripción de la foto 2]</figcaption>
+            </figure>
+            <figure class="photo">
+              <img src="assets/tutoria-3.jpg" alt="Tutoría — foto 3"
+                   onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-3.jpg'" />
+              <figcaption class="photo__cap">[Descripción de la foto 3]</figcaption>
+            </figure>
+            <figure class="photo">
+              <img src="assets/tutoria-4.jpg" alt="Tutoría — foto 4"
+                   onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-4.jpg'" />
+              <figcaption class="photo__cap">[Descripción de la foto 4]</figcaption>
+            </figure>
+            <figure class="photo">
+              <img src="assets/tutoria-5.jpg" alt="Tutoría — foto 5"
+                   onerror="this.classList.add('is-placeholder');this.alt='assets/tutoria-5.jpg'" />
+              <figcaption class="photo__cap">[Descripción de la foto 5]</figcaption>
+            </figure>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Foto anterior">‹</button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Foto siguiente">›</button>
         </div>
 
         <h3>Reseñas</h3>

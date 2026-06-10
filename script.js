@@ -51,7 +51,7 @@ function cascade(section) {
   const wrap = section.querySelector('.wrap') || section;
   const items = [];
   wrap.querySelectorAll(':scope > *').forEach((child) => {
-    if (child.matches('.gallery, .exp, .stats')) {
+    if (child.matches('.exp, .stats')) {
       child.querySelectorAll(':scope > *').forEach((g) => items.push(g));
     } else {
       items.push(child);
@@ -135,15 +135,66 @@ counters.forEach((c) => countObserver.observe(c));
   start();
 })();
 
-// ===================== Lightbox de la galería =====================
+// ===================== Carrusel de galería =====================
+let carouselDragged = false; // se comparte con el lightbox para no abrir al arrastrar
+(function initCarousel() {
+  const track = document.getElementById('galeriaTrack');
+  if (!track) return;
+  const prev = document.querySelector('.carousel__btn--prev');
+  const next = document.querySelector('.carousel__btn--next');
+
+  function step() {
+    const card = track.querySelector('.photo');
+    return card ? card.getBoundingClientRect().width + 20 : 320;
+  }
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+
+  // Arrastrar para deslizar (desktop)
+  let down = false, startX = 0, startScroll = 0;
+  track.addEventListener('pointerdown', (e) => {
+    down = true; carouselDragged = false;
+    startX = e.clientX; startScroll = track.scrollLeft;
+    track.classList.add('is-grabbing');
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 5) carouselDragged = true;
+    track.scrollLeft = startScroll - dx;
+  });
+  window.addEventListener('pointerup', () => {
+    down = false; track.classList.remove('is-grabbing');
+  });
+
+  // Autoplay suave (se pausa al interactuar o al pasar el mouse)
+  let auto = null;
+  function play() {
+    if (auto) return;
+    auto = setInterval(() => {
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: step(), behavior: 'smooth' });
+      }
+    }, 3800);
+  }
+  function stop() { clearInterval(auto); auto = null; }
+  track.addEventListener('pointerenter', stop);
+  track.addEventListener('pointerleave', play);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+})();
+
+// ===================== Lightbox =====================
 (function initLightbox() {
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
   const lbImg = lightbox.querySelector('.lightbox__img');
   const closeBtn = lightbox.querySelector('.lightbox__close');
 
-  document.querySelectorAll('.gallery__item img').forEach((img) => {
+  document.querySelectorAll('.photo img').forEach((img) => {
     img.addEventListener('click', () => {
+      if (carouselDragged) return;                       // venía de un arrastre
       if (img.classList.contains('is-placeholder')) return; // aún sin foto real
       lbImg.src = img.src;
       lbImg.alt = img.alt;
