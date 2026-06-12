@@ -181,6 +181,21 @@ a { color: var(--purple); }
 .stat__num { font-family: 'Fraunces', serif; font-weight: 700; font-size: 2.4rem; color: var(--purple); line-height: 1; }
 .stat__label { font-size: .85rem; color: var(--ink-soft); margin-top: 4px; }
 
+/* Banda de estadísticas (sección Tutorías, sobre fondo blanco) */
+.stats--band {
+  gap: 0; margin: 30px 0; padding: 26px 20px;
+  background: linear-gradient(135deg, var(--lav-light), #f6eefc);
+  border-radius: var(--radius); border: 1px solid #e7daf2;
+  justify-content: space-around; text-align: center;
+}
+.stats--band .stat { flex: 1 1 160px; align-items: center; }
+.stats--band .stat__num { font-size: 2.7rem; }
+.stats--band .stat + .stat { border-left: 1px solid rgba(181,126,220,.3); }
+@media (max-width: 620px) {
+  .stats--band { flex-direction: column; gap: 22px; }
+  .stats--band .stat + .stat { border-left: 0; }
+}
+
 /* ===================== Features (qué hacemos) ===================== */
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin: 6px 0 8px; }
 .feature {
