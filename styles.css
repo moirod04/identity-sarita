@@ -181,6 +181,19 @@ a { color: var(--purple); }
 .stat__num { font-family: 'Fraunces', serif; font-weight: 700; font-size: 2.4rem; color: var(--purple); line-height: 1; }
 .stat__label { font-size: .85rem; color: var(--ink-soft); margin-top: 4px; }
 
+/* ===================== Features (qué hacemos) ===================== */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin: 6px 0 8px; }
+.feature {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--white); border-radius: 14px; padding: 18px 20px;
+  box-shadow: var(--shadow-sm); border: 1px solid #efe7f6;
+  transition: transform .25s, box-shadow .25s;
+}
+.feature:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.feature__ico { font-size: 1.6rem; line-height: 1; flex-shrink: 0; }
+.feature h4 { margin: 0 0 4px; font-size: 1rem; color: var(--plum); }
+.feature p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
+
 /* ===================== Carrusel de galería + Lightbox ===================== */
 .carousel { position: relative; }
 .carousel__track {
@@ -309,12 +322,14 @@ a { color: var(--purple); }
 /* ===================== Reveal en cascada ===================== */
 .reveal .wrap > *,
 .reveal .exp > *,
+.reveal .features > *,
 .reveal .stats > * {
   opacity: 0; transform: translateY(-30px);
   transition: opacity .55s ease, transform .6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal.is-visible .wrap > *,
 .reveal.is-visible .exp > *,
+.reveal.is-visible .features > *,
 .reveal.is-visible .stats > * { opacity: 1; transform: none; }
 
 /* ===================== Responsive ===================== */
@@ -345,7 +360,7 @@ a { color: var(--purple); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal .wrap > *, .reveal .exp > *, .reveal .stats > * { transition: none; opacity: 1; transform: none; }
+  .reveal .wrap > *, .reveal .exp > *, .reveal .features > *, .reveal .stats > * { transition: none; opacity: 1; transform: none; }
   .photo:hover img { transform: none; }
   .carousel__track { scroll-behavior: auto; }
   .hero { animation: none; }

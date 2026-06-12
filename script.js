@@ -51,7 +51,7 @@ function cascade(section) {
   const wrap = section.querySelector('.wrap') || section;
   const items = [];
   wrap.querySelectorAll(':scope > *').forEach((child) => {
-    if (child.matches('.exp, .stats')) {
+    if (child.matches('.exp, .stats, .features')) {
       child.querySelectorAll(':scope > *').forEach((g) => items.push(g));
     } else {
       items.push(child);
