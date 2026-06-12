@@ -301,6 +301,29 @@ a { color: var(--purple); }
 .exp__card h3 { margin: 0 0 8px; }
 .exp__card p { margin: 0; }
 
+/* Bloque destacado (colaboración) */
+.highlight {
+  position: relative; margin-top: 24px; padding: 32px 34px;
+  border-radius: var(--radius); color: var(--white); overflow: hidden;
+  background: linear-gradient(135deg, var(--plum), var(--purple) 60%, var(--lavender));
+  box-shadow: var(--shadow);
+}
+.highlight__star {
+  position: absolute; top: -10px; right: 14px; font-size: 7rem; line-height: 1;
+  color: rgba(255,255,255,.12); pointer-events: none;
+}
+.highlight__kicker { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-weight: 700; color: var(--gold); margin: 0 0 6px; }
+.highlight__title { color: var(--white); margin: 0 0 10px; font-size: 1.4rem; max-width: 28ch; }
+.highlight__text { color: rgba(255,255,255,.92); margin: 0 0 18px; max-width: 70ch; position: relative; z-index: 1; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1; }
+.chip {
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32);
+  color: var(--white); font-size: .86rem; font-weight: 500;
+  padding: 7px 14px; border-radius: 999px; backdrop-filter: blur(4px);
+  transition: transform .2s, background .2s;
+}
+.chip:hover { transform: translateY(-2px); background: rgba(255,255,255,.28); }
+
 /* Marquee */
 .marquee { margin-top: 40px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee__track { display: flex; gap: 22px; width: max-content; animation: marquee 26s linear infinite; }
