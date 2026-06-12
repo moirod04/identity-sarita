@@ -323,6 +323,15 @@ a { color: var(--purple); }
   transition: transform .2s, background .2s;
 }
 .chip:hover { transform: translateY(-2px); background: rgba(255,255,255,.28); }
+.proofs { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; position: relative; z-index: 1; }
+.proofs__label { color: var(--gold); font-weight: 700; font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; }
+.proof {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--white); color: var(--purple); text-decoration: none;
+  font-size: .86rem; font-weight: 600; padding: 8px 16px; border-radius: 999px;
+  box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s;
+}
+.proof:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 
 /* Marquee */
 .marquee { margin-top: 40px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
