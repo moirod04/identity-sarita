@@ -80,7 +80,9 @@ const countObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
-      const target = parseInt(el.dataset.target, 10) || 0;
+      const target = parseInt(el.dataset.target, 10);
+      // Valor no numérico (ej. "B1"): se muestra estático, sin animar.
+      if (Number.isNaN(target)) { obs.unobserve(el); return; }
       const suffix = el.dataset.suffix || '';
       const duration = 1400;
       let startTime = null;
