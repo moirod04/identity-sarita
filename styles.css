@@ -263,8 +263,12 @@ a { color: var(--purple); }
 }
 .lightbox.is-open { display: flex; animation: fadeIn .2s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.lightbox__img { max-width: 92vw; max-height: 88vh; border-radius: 12px; box-shadow: var(--shadow-lg); }
-.lightbox__close { position: absolute; top: 18px; right: 24px; background: none; border: 0; color: var(--white); font-size: 2.4rem; line-height: 1; cursor: pointer; }
+.lightbox__inner { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.lightbox__img { max-width: 92vw; max-height: 86vh; border-radius: 12px; box-shadow: var(--shadow-lg); display: none; }
+.lightbox__video { max-width: 92vw; max-height: 86vh; border-radius: 12px; box-shadow: var(--shadow-lg); background: #000; display: none; }
+.lightbox__missing { display: none; color: var(--white); background: rgba(255,255,255,.12); padding: 28px 36px; border-radius: 12px; font-size: 1rem; }
+.lightbox__cap { color: rgba(255,255,255,.9); font-size: .92rem; margin: 0; text-align: center; }
+.lightbox__close { position: absolute; top: 18px; right: 24px; background: none; border: 0; color: var(--white); font-size: 2.4rem; line-height: 1; cursor: pointer; z-index: 2; }
 
 /* ===================== Slider de reseñas ===================== */
 .slider { position: relative; max-width: 720px; margin: 0 auto; overflow: hidden; }
@@ -328,13 +332,11 @@ a { color: var(--purple); }
 .proof {
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--white); color: var(--purple); text-decoration: none;
-  font-size: .86rem; font-weight: 600; padding: 8px 16px; border-radius: 999px;
+  font-family: inherit; font-size: .86rem; font-weight: 600; padding: 8px 16px;
+  border: 0; border-radius: 999px; cursor: pointer;
   box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s;
 }
 .proof:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-.highlight__media { margin: 20px 0 0; position: relative; z-index: 1; max-width: 360px; }
-.highlight__video { width: 100%; border-radius: 14px; box-shadow: var(--shadow); background: #1c1124; display: block; }
-.highlight__media figcaption { margin-top: 8px; font-size: .82rem; color: rgba(255,255,255,.8); }
 
 /* Marquee */
 .marquee { margin-top: 40px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }

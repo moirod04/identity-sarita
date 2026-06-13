@@ -187,27 +187,66 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) play();
 })();
 
-// ===================== Lightbox =====================
+// ===================== Modal (imagen / video) =====================
 (function initLightbox() {
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
   const lbImg = lightbox.querySelector('.lightbox__img');
+  const lbVideo = lightbox.querySelector('.lightbox__video');
+  const lbMissing = lightbox.querySelector('.lightbox__missing');
+  const lbCap = lightbox.querySelector('.lightbox__cap');
   const closeBtn = lightbox.querySelector('.lightbox__close');
 
+  function open() {
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  }
+  function reset() {
+    lbImg.style.display = 'none'; lbImg.src = '';
+    lbVideo.style.display = 'none'; lbVideo.removeAttribute('src'); lbVideo.load();
+    lbMissing.style.display = 'none';
+    lbCap.textContent = '';
+  }
+  function showImage(src, alt, caption) {
+    reset();
+    lbImg.onerror = () => { lbImg.style.display = 'none'; lbMissing.style.display = 'block'; };
+    lbImg.style.display = 'block'; lbImg.src = src; lbImg.alt = alt || '';
+    lbCap.textContent = caption || '';
+    open();
+  }
+  function showVideo(src, caption) {
+    reset();
+    lbVideo.style.display = 'block'; lbVideo.src = src; lbVideo.load();
+    lbCap.textContent = caption || '';
+    open();
+    lbVideo.play().catch(() => {});
+  }
+
+  // Fotos de la galería de tutorías
   document.querySelectorAll('.photo img').forEach((img) => {
     img.addEventListener('click', () => {
       if (carouselDragged) return;                       // venía de un arrastre
       if (img.classList.contains('is-placeholder')) return; // aún sin foto real
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      lightbox.classList.add('is-open');
-      lightbox.setAttribute('aria-hidden', 'false');
+      showImage(img.src, img.alt, '');
     });
   });
+
+  // Botones de "Pruebas" (imagen o video) en el bloque destacado
+  document.querySelectorAll('.proof[data-media]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.media;
+      const src = btn.dataset.src;
+      const cap = btn.dataset.caption || '';
+      if (type === 'video') showVideo(src, cap);
+      else showImage(src, btn.textContent.trim(), cap);
+    });
+  });
+
   function close() {
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
-    lbImg.src = '';
+    lbVideo.pause();
+    reset();
   }
   closeBtn.addEventListener('click', close);
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });

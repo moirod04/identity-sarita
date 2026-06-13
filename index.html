@@ -264,18 +264,12 @@
 
           <div class="proofs">
             <span class="proofs__label">Pruebas:</span>
+            <button class="proof" type="button" data-media="image" data-src="assets/foto-tv.jpg" data-caption="En el set de TV">📷 Foto TV</button>
+            <button class="proof" type="button" data-media="video" data-src="assets/prueba-tv.mp4" data-caption="Participación en TV">📺 Video TV</button>
             <a class="proof" href="https://www.instagram.com/p/Ca3GKhxAANe/" target="_blank" rel="noopener">📸 Publicación</a>
             <a class="proof" href="https://www.instagram.com/tv/Cba-aYhAsIf/" target="_blank" rel="noopener">🎬 Video 1</a>
             <a class="proof" href="https://www.instagram.com/tv/Cb3iGmzADQ8/" target="_blank" rel="noopener">🎬 Video 2</a>
           </div>
-
-          <figure class="highlight__media">
-            <video class="highlight__video" controls preload="metadata" playsinline>
-              <source src="assets/prueba-tv.mp4" type="video/mp4" />
-              Tu navegador no puede reproducir el video.
-            </video>
-            <figcaption>Participación en TV</figcaption>
-          </figure>
         </article>
 
         <!-- Cinta de skills (marquee) -->
@@ -365,10 +359,15 @@
     </div>
   </footer>
 
-  <!-- Lightbox para la galería -->
+  <!-- Modal (galería y pruebas: imagen o video) -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox__close" aria-label="Cerrar">×</button>
-    <img class="lightbox__img" src="" alt="" />
+    <figure class="lightbox__inner">
+      <img class="lightbox__img" src="" alt="" />
+      <video class="lightbox__video" controls playsinline></video>
+      <p class="lightbox__missing">La imagen aún no está disponible.</p>
+      <figcaption class="lightbox__cap"></figcaption>
+    </figure>
   </div>
 
   <script src="script.js"></script>
