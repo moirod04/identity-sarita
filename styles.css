@@ -304,6 +304,13 @@ a { color: var(--purple); }
 .exp__icon { font-size: 2.2rem; margin-bottom: 8px; }
 .exp__card h3 { margin: 0 0 8px; }
 .exp__card p { margin: 0; }
+.card-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  background: var(--lav-light); color: var(--purple); text-decoration: none;
+  font-size: .86rem; font-weight: 600; padding: 8px 16px; border-radius: 999px;
+  transition: background .2s, transform .2s;
+}
+.card-link:hover { background: var(--lavender); color: var(--white); transform: translateY(-2px); }
 
 /* Bloque destacado (colaboración) */
 .highlight {
