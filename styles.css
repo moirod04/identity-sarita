@@ -332,6 +332,9 @@ a { color: var(--purple); }
   box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s;
 }
 .proof:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.highlight__media { margin: 20px 0 0; position: relative; z-index: 1; max-width: 360px; }
+.highlight__video { width: 100%; border-radius: 14px; box-shadow: var(--shadow); background: #1c1124; display: block; }
+.highlight__media figcaption { margin-top: 8px; font-size: .82rem; color: rgba(255,255,255,.8); }
 
 /* Marquee */
 .marquee { margin-top: 40px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
