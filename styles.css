@@ -410,7 +410,8 @@ a { color: var(--purple); }
 .contacto .hero__links a:hover { background: var(--lav-light); }
 .footer { background: var(--plum); color: rgba(255,255,255,.9); padding: 48px 0; text-align: center; }
 .footer p { margin: 0 0 8px; }
-.footer__small { font-size: .82rem; color: rgba(255,255,255,.65); max-width: 60ch; margin: 0 auto 16px; text-align: center; text-wrap: balance; }
+.footer__small { font-size: .82rem; color: rgba(255,255,255,.65); margin: 0 auto 16px; text-align: center; white-space: nowrap; }
+@media (max-width: 820px) { .footer__small { white-space: normal; max-width: 60ch; } }
 .footer__top { color: var(--lav-light); text-decoration: none; font-weight: 600; }
 .footer__top:hover { color: var(--white); }
 
