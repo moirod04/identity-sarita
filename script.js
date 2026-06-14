@@ -222,8 +222,8 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
     lbVideo.play().catch(() => {});
   }
 
-  // Fotos de la galería de tutorías y de "trabajos realizados"
-  document.querySelectorAll('.photo img, .work img').forEach((img) => {
+  // Fotos de la galería de tutorías
+  document.querySelectorAll('.photo img').forEach((img) => {
     img.addEventListener('click', () => {
       if (carouselDragged) return;                       // venía de un arrastre
       if (img.classList.contains('is-placeholder')) return; // aún sin foto real
@@ -251,4 +251,51 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
   closeBtn.addEventListener('click', close);
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+
+// ===================== Modal carrusel de "Trabajos" =====================
+(function initWorks() {
+  const modal = document.getElementById('worksModal');
+  const openBtn = document.getElementById('openWorks');
+  if (!modal || !openBtn) return;
+  const track = modal.querySelector('.wcar__track');
+  const slides = Array.from(track.children);
+  const dotsWrap = modal.querySelector('.wcar__dots');
+  const closeBtn = document.getElementById('worksClose');
+  let index = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'wcar__dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('aria-label', 'Trabajo ' + (i + 1));
+    dot.addEventListener('click', () => go(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function go(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+  }
+  function open() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  openBtn.addEventListener('click', () => { go(0); open(); });
+  modal.querySelector('.wcar__btn--next').addEventListener('click', () => go(index + 1));
+  modal.querySelector('.wcar__btn--prev').addEventListener('click', () => go(index - 1));
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') go(index + 1);
+    else if (e.key === 'ArrowLeft') go(index - 1);
+  });
 })();

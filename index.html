@@ -112,28 +112,18 @@
           </div>
         </div>
         <aside class="sobre__aside">
-          <p>En cuanto a mi perfil de competencias, manejo el idioma inglés en un nivel intermedio
-            y cuento con un sólido dominio de las principales plataformas de redes sociales
-            —Instagram, TikTok y Twitter—, así como de herramientas de diseño como Canva. Asimismo,
-            me mantengo en constante investigación y actualización en torno a las nuevas herramientas
-            de Inteligencia Artificial, convencida de su valor en los entornos profesionales actuales.</p>
-          <p>Así como mencioné anteriormente, soy una persona creativa a la que le gusta el diseño y
-            el lettering. Me gusta ayudar y apoyar a mis alumnos en sus trabajos y tareas con la
-            finalidad de ir más allá de la excelencia, ayudándolos a destacar entre sus compañeros y
-            a enorgullecer a sus representantes y profesores. Aquí les muestro algunos trabajos
-            realizados:</p>
+          <p>En el plano profesional, poseo un nivel intermedio de inglés y un sólido dominio de las
+            principales plataformas de redes sociales —Instagram, TikTok y X (Twitter)—, así como de
+            herramientas de diseño como Canva. Asimismo, me mantengo en constante formación y
+            actualización en torno a las nuevas herramientas de Inteligencia Artificial, convencida
+            de su valor en los entornos profesionales actuales.</p>
+          <p>Como mencioné anteriormente, soy una persona creativa con especial inclinación por el
+            diseño y el lettering. Disfruto acompañar a mis estudiantes en la realización de sus
+            trabajos y tareas, procurando que cada proyecto trascienda la excelencia: que destaquen
+            entre sus compañeros y enorgullezcan a sus representantes y profesores. A continuación,
+            comparto algunos de los trabajos realizados:</p>
 
-          <!-- REEMPLAZAR: subí tus trabajos a assets/trabajo-1.jpg … (duplicá/quitá <figure> según cuántos tengas) -->
-          <div class="works">
-            <figure class="work"><img src="assets/trabajo-1.jpg" alt="Trabajo 1"
-              onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-1.jpg'" /></figure>
-            <figure class="work"><img src="assets/trabajo-2.jpg" alt="Trabajo 2"
-              onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-2.jpg'" /></figure>
-            <figure class="work"><img src="assets/trabajo-3.jpg" alt="Trabajo 3"
-              onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-3.jpg'" /></figure>
-            <figure class="work"><img src="assets/trabajo-4.jpg" alt="Trabajo 4"
-              onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-4.jpg'" /></figure>
-          </div>
+          <button class="btn-works" type="button" id="openWorks">🎨 Ver trabajos</button>
 
           <p class="sobre__lema"><em>“Nunca es tarde para aprender”</em> y
             <em>“Trata de aprender algo nuevo todos los días”</em>.</p>
@@ -406,6 +396,31 @@
       <p class="lightbox__missing">La imagen aún no está disponible.</p>
       <figcaption class="lightbox__cap"></figcaption>
     </figure>
+  </div>
+
+  <!-- Modal con carrusel de "Trabajos realizados" -->
+  <div class="lightbox" id="worksModal" aria-hidden="true">
+    <button class="lightbox__close" id="worksClose" aria-label="Cerrar">×</button>
+    <div class="wcar">
+      <div class="wcar__viewport">
+        <!-- REEMPLAZAR: subí tus trabajos a assets/trabajo-1.jpg … (duplicá/quitá slides según cuántos tengas) -->
+        <div class="wcar__track">
+          <div class="wcar__slide"><img src="assets/trabajo-1.jpg" alt="Trabajo 1"
+            onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-1.jpg'" /></div>
+          <div class="wcar__slide"><img src="assets/trabajo-2.jpg" alt="Trabajo 2"
+            onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-2.jpg'" /></div>
+          <div class="wcar__slide"><img src="assets/trabajo-3.jpg" alt="Trabajo 3"
+            onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-3.jpg'" /></div>
+          <div class="wcar__slide"><img src="assets/trabajo-4.jpg" alt="Trabajo 4"
+            onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-4.jpg'" /></div>
+          <div class="wcar__slide"><img src="assets/trabajo-5.jpg" alt="Trabajo 5"
+            onerror="this.classList.add('is-placeholder');this.alt='assets/trabajo-5.jpg'" /></div>
+        </div>
+      </div>
+      <button class="wcar__btn wcar__btn--prev" aria-label="Anterior">‹</button>
+      <button class="wcar__btn wcar__btn--next" aria-label="Siguiente">›</button>
+      <div class="wcar__dots" aria-hidden="true"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
