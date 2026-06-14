@@ -222,8 +222,8 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
     lbVideo.play().catch(() => {});
   }
 
-  // Fotos de la galería de tutorías
-  document.querySelectorAll('.photo img').forEach((img) => {
+  // Fotos de la galería de tutorías y de "trabajos realizados"
+  document.querySelectorAll('.photo img, .work img').forEach((img) => {
     img.addEventListener('click', () => {
       if (carouselDragged) return;                       // venía de un arrastre
       if (img.classList.contains('is-placeholder')) return; // aún sin foto real
