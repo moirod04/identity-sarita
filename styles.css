@@ -369,6 +369,7 @@ a { color: var(--purple); }
 }
 .highlight__kicker { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-weight: 700; color: var(--gold); margin: 0 0 6px; }
 .highlight__title { color: var(--white); margin: 0 0 10px; font-size: 1.4rem; max-width: 28ch; }
+.highlight__name { color: var(--gold); }
 .highlight__text { color: rgba(255,255,255,.92); margin: 0 0 18px; max-width: 70ch; position: relative; z-index: 1; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1; }
 .chip {
