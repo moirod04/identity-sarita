@@ -189,7 +189,9 @@ a { color: var(--purple); }
 .wcar__viewport { overflow: hidden; border-radius: 14px; }
 .wcar__track { display: flex; transition: transform .45s cubic-bezier(0.22,1,0.36,1); }
 .wcar__slide { flex: 0 0 100%; display: flex; align-items: center; justify-content: center; }
-.wcar__slide img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 14px; box-shadow: var(--shadow-lg); background: #1c1124; }
+.wcar__slide img,
+.wcar__video { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 14px; box-shadow: var(--shadow-lg); background: #1c1124; }
+.wcar__video { width: auto; }
 .wcar__slide img.is-placeholder {
   display: grid; place-items: center; width: 100%; aspect-ratio: 3/4; background: var(--lav-light);
   color: var(--purple); font-size: .82rem; text-align: center; padding: 16px;

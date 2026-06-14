@@ -273,16 +273,21 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
   });
   const dots = Array.from(dotsWrap.children);
 
+  function pauseVideos() {
+    modal.querySelectorAll('video').forEach((v) => v.pause());
+  }
   function go(i) {
     index = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+    pauseVideos();
   }
   function open() {
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
   }
   function close() {
+    pauseVideos();
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
   }
