@@ -182,6 +182,8 @@ a { color: var(--purple); }
 .sobre__aside p { margin: 0 0 16px; }
 .sobre__aside p:last-child { margin-bottom: 0; }
 .sobre__lema { padding-left: 16px; border-left: 3px solid var(--gold); color: var(--ink-soft); font-style: italic; }
+.sobre__foto { margin: 22px 0 0; }
+.sobre__foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 18%; border-radius: var(--radius); box-shadow: var(--shadow); }
 .btn-works {
   display: inline-flex; align-items: center; gap: 8px; margin: 8px 0 22px;
   background: var(--purple); color: var(--white); font-family: inherit;
