@@ -127,6 +127,13 @@ a { color: var(--purple); }
 .hero__photo img {
   width: 220px; height: 220px; object-fit: cover; border-radius: 50%;
   border: 5px solid rgba(255,255,255,.5); box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s, border-color .35s;
+}
+.hero__photo img:hover {
+  transform: scale(1.08);
+  border-color: rgba(255,255,255,.85);
+  box-shadow: 0 30px 70px rgba(75, 28, 113, 0.32);
 }
 .hero__photo img.is-placeholder {
   display: grid; place-items: center; background: rgba(255,255,255,.15);
@@ -459,6 +466,6 @@ a { color: var(--purple); }
   .photo:hover img { transform: none; }
   .carousel__track { scroll-behavior: auto; }
   .hero { animation: none; }
-  .hero__title:hover { transform: none; }
+  .hero__title:hover, .hero__photo img:hover { transform: none; }
   .hero__scroll, .blob, .marquee__track { animation: none; }
 }
