@@ -412,6 +412,28 @@ a { color: var(--purple); }
 .qr img.is-placeholder { display: grid; place-items: center; background: var(--lav-light); color: var(--purple); font-size: .8rem; padding: 24px; border-radius: 10px; }
 .qr p { margin: 0; font-size: .85rem; color: var(--ink-soft); }
 
+/* ===================== Proyectos realizados ===================== */
+.projects { margin-top: 56px; }
+.projects > p { max-width: 75ch; color: var(--ink-soft); }
+.projects-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px; margin-top: 20px;
+}
+.project-thumb {
+  position: relative; padding: 0; border: 0; cursor: pointer; aspect-ratio: 1;
+  border-radius: 12px; overflow: hidden; background: var(--lav-light);
+  box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s;
+}
+.project-thumb:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s cubic-bezier(0.22,1,0.36,1); display: block; }
+.project-thumb:hover img { transform: scale(1.08); }
+.project-thumb--video {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: linear-gradient(135deg, var(--plum), var(--purple)); color: var(--white);
+}
+.project-thumb__play { font-size: 1.5rem; line-height: 1; }
+.project-thumb__label { font-size: .78rem; font-weight: 600; letter-spacing: .02em; }
+
 /* ===================== Contacto / Footer ===================== */
 .contacto { text-align: left; }
 .contacto .hero__links a { color: var(--purple); border-color: var(--lavender); }

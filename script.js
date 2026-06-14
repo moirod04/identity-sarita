@@ -256,8 +256,7 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
 // ===================== Modal carrusel de "Trabajos" =====================
 (function initWorks() {
   const modal = document.getElementById('worksModal');
-  const openBtn = document.getElementById('openWorks');
-  if (!modal || !openBtn) return;
+  if (!modal) return;
   const track = modal.querySelector('.wcar__track');
   const slides = Array.from(track.children);
   const dotsWrap = modal.querySelector('.wcar__dots');
@@ -292,7 +291,13 @@ let carouselDragged = false; // se comparte con el lightbox para no abrir al arr
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  openBtn.addEventListener('click', () => { go(0); open(); });
+  // Disparadores: botón "Ver trabajos" (si existe) y miniaturas de "Proyectos realizados"
+  const openBtn = document.getElementById('openWorks');
+  if (openBtn) openBtn.addEventListener('click', () => { go(0); open(); });
+  document.querySelectorAll('[data-work-index]').forEach((el) => {
+    el.addEventListener('click', () => { go(parseInt(el.dataset.workIndex, 10) || 0); open(); });
+  });
+
   modal.querySelector('.wcar__btn--next').addEventListener('click', () => go(index + 1));
   modal.querySelector('.wcar__btn--prev').addEventListener('click', () => go(index - 1));
   closeBtn.addEventListener('click', close);
