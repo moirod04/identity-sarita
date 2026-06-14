@@ -404,8 +404,7 @@ a { color: var(--purple); }
 .qr p { margin: 0; font-size: .85rem; color: var(--ink-soft); }
 
 /* ===================== Contacto / Footer ===================== */
-.contacto { text-align: center; }
-.contacto .section__lead { margin-left: auto; margin-right: auto; }
+.contacto { text-align: left; }
 .contacto .hero__links a { color: var(--purple); border-color: var(--lavender); }
 .contacto .hero__links a:hover { background: var(--lav-light); }
 .footer { background: var(--plum); color: rgba(255,255,255,.9); padding: 48px 0; text-align: center; }
