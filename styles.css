@@ -266,7 +266,7 @@ a { color: var(--purple); }
 .carousel__track.is-grabbing .photo { pointer-events: none; }
 
 .photo {
-  position: relative; margin: 0; flex: 0 0 clamp(240px, 70%, 330px);
+  position: relative; margin: 0; flex: 0 0 clamp(300px, 86%, 560px);
   aspect-ratio: 4 / 3; scroll-snap-align: center;
   border-radius: 18px; overflow: hidden; cursor: pointer;
   box-shadow: var(--shadow-sm);
