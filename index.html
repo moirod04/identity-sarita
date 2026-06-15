@@ -337,14 +337,11 @@
           <div class="videocv__video">
             <h3>Video de presentación</h3>
             <div class="video-frame">
-              <!-- REEMPLAZAR el src por tu video real:
-                   YouTube → https://www.youtube.com/embed/ID_DEL_VIDEO
-                   Drive   → https://drive.google.com/file/d/ID/preview -->
-              <iframe
-                src="about:blank"
-                title="Video de presentación de Sara Nova"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+              <video controls playsinline preload="metadata"
+                     title="Video de presentación de Sara Nova">
+                <source src="assets/video-presentacion.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+              </video>
             </div>
           </div>
 
