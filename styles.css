@@ -343,6 +343,7 @@ a { color: var(--purple); }
 /* ===================== Experiencia ===================== */
 .exp { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .exp__card {
+  display: flex; flex-direction: column;
   background: var(--white); border-radius: var(--radius); padding: 30px 28px;
   box-shadow: var(--shadow-sm); border: 1px solid #efe7f6;
   transition: transform .25s, box-shadow .25s;
@@ -350,9 +351,9 @@ a { color: var(--purple); }
 .exp__card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .exp__icon { font-size: 2.2rem; margin-bottom: 8px; }
 .exp__card h3 { margin: 0 0 8px; }
-.exp__card p { margin: 0; }
+.exp__card p { margin: 0 0 14px; }
 .card-link {
-  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; margin-top: auto;
   background: var(--lav-light); color: var(--purple); text-decoration: none;
   font-size: .86rem; font-weight: 600; padding: 8px 16px; border-radius: 999px;
   transition: background .2s, transform .2s;
